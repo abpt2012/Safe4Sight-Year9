@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="/Images/icon_transparent.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preparedness</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: rgb(243, 243, 243);">
+    <nav class="navbar navbar-expand-lg color3bg topnavbar">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="azure">
+                <i class="fa-solid fa-phone me-2"></i>
+                +95 9201844392
+            </div>
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="Images/icon.png" alt="Safe4Sight logo" height="50" class="rounded-4 me-3">
+                <div class="azure">
+                    <h4 class="mb-0">Safe4Sight</h4>
+                </div>
+            </a>
+            <div class="d-flex">
+                <button type="button" class="btn me-2 azure" data-bs-toggle="modal" data-bs-target="#logIn">Log In</button>
+                <button type="button" class="btn azure" data-bs-toggle="modal" data-bs-target="#signUp">Sign Up</button>
+            </div>
+        </div>
+    </nav>
+    <div class="modal fade" id="logIn">
+            <div class="modal-dialog modal-md modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Log into your Account</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-4">
+                            <label class="form-label fw-semibold">Username / Email</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-white"><i class="fa-solid fa-user color2"></i></span>
+                                <input type="text" class="form-control" placeholder="Type your username / email">
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Password</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-white"><i class="fa-solid fa-key color2"></i></span>
+                                <input type="password" class="form-control" placeholder="Type your passwword">
+                            </div>
+                        </div>
+                        <button type="button" class="btn text-white mb-3" style="background-color: #618764;" onclick="loggedIn()">
+                            Log In
+                        </button>
+                        <div class="alert alert-success d-none" id="loggedIn">Logged in successfully!</div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <p>Don't have an account? <a href="#" data-bs-toggle="modal" data-bs-target="#signUp" style="text-decoration: none;">Sign Up Now</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="signUp">
+            <div class="modal-dialog modal-md modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Create an Account</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-4">
+                                <label class="form-label fw-semibold">Username</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white"><i class="fa-solid fa-user color2"></i></span>
+                                    <input type="text" class="form-control" placeholder="Type your username">
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label fw-semibold">Email</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white"><i class="fa-solid fa-envelope color2"></i></span>
+                                    <input type="text" class="form-control" placeholder="Type your email">
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">Password</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white"><i class="fa-solid fa-key color2"></i></span>
+                                    <input type="password" class="form-control" placeholder="Type your passwword">
+                                </div>
+                            </div>
+                            <button type="button" class="btn text-white mb-3" style="background-color: #618764;" onclick="accountCreated()">
+                            Sign Up
+                            </button>
+                            <div class="alert alert-success d-none" id="accountCreated">Account created successfully!</div>
+                        </form>
+                        
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <p>Already have an account? <a href="#" data-bs-toggle="modal" data-bs-target="#logIn" style="text-decoration: none;">Login</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="sticky-nav">
+        <nav class="navbar navbar-dark navbar-expand-lg color3bg bottomnavbar">
+            <div class="container d-flex align-items-center justify-content-between">
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link azure dropdown-toggle" role="button" data-bs-toggle="dropdown">Learn & Prepare</a>
+                            <ul class="dropdown-menu text-center">
+                                <li><a class="dropdown-item" href="earthquake.html">Earthquakes</a></li>
+                                <li><a class="dropdown-item" href="storm.html">Storms</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link azure dropdown-toggle" role="button" data-bs-toggle="dropdown">Community</a>
+                            <ul class="dropdown-menu text-center">
+                                <li><a class="dropdown-item" href="donation.html">Donation</a></li>
+                                <li><a class="dropdown-item" href="community.html">Forum</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="preparedness_checker.html" class="nav-link azure">Are You Prepared?</a></li>
+                    </ul>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </div>
+    
+    <section id="privacy-policy" class="container privacy-policy">
+
+        <h1 class="mb-4">Privacy Policy</h1>
+        <p>At Safe4Sight, we value your privacy and are committed to protecting the personal information you share with us. This Privacy Policy explains what information may be collected through our website,
+            how it is used, and how we aim to keep it safe while providing disaster preparedness resources and community support.</p>
+        <p><strong>Last updated:</strong> 15/11/2026</p>
+
+
+        <h3 class="mt-4 mb-4">1. Information We Collect</h3>
+        <p>Safe4Sight may collect information that you voluntarily provide while using our website. This may include:</p>
+        <ul>
+            <li>Basic account information, such as your name and email address.</li>
+            <li>Household information provided through emergency preparedness assessments.</li>
+            <li>Emergency contact details and evacuation information entered into family emergency plans.</li>
+            <li>Information submitted when creating or supporting a fundraising campaign.</li>
+            <li>Messages, feedback, or enquiries submitted through our community features.</li>
+        </ul>
+        <p>We only aim to collect information that is relevant to providing our website's services. Please avoid sharing sensitive information that is not necessary.</p>
+
+
+        <h3 class="mt-4 mb-4">2. How We Use Your Information</h3>
+        <p>The information collected through Safe4Sight is intended to improve disaster awareness, preparedness, and community participation. We may use submitted information to:</p>
+        <ul>
+            <li>Generate personalised household disaster preparedness assessments.</li>
+            <li>Help users create and organise their family emergency plans.</li>
+            <li>Manage user accounts and provide access to website features.</li>
+            <li>Review fundraising submissions and provide campaign information.</li>
+            <li>Respond to enquiries, feedback, and community contributions.</li>
+            <li>Improve the usability and effectiveness of our website.</li>
+        </ul>
+
+
+        <h3 class="mt-4 mb-4">3. Emergency Plans and Personal Information</h3>
+        <p>Safe4Sight provides tools that allow users to create household emergency plans containing information such as home locations, emergency contacts, evacuation routes, and important supply locations.</p>
+        <p>Since this information may be sensitive, users should only provide details they are comfortable sharing. We encourage users to keep their completed emergency plans in a secure location and avoid sharing them publicly.</p>
+
+
+        <h3 class="mt-4 mb-4">4. Fundraising and Donation Information</h3>
+        <p>Safe4Sight aims to support disaster-affected communities through fundraising and donation initiatives. Information submitted by campaign organisers may be used to review, display, and manage fundraising campaigns.</p>
+        <p>Any payment or donation information is subject to the arrangements of the payment service used. Where an external payment provider is involved, its own privacy policy and data protection practices will apply. Users should review those policies before completing a transaction.</p>
+
+
+        <h3 class="mt-4 mb-4">5. Information Sharing and Campaign Verification</h3>
+        <p>Safe4Sight does not intend to sell users' personal information to third parties. Information may only be shared where necessary to provide website services, manage fundraising activities, respond to legitimate requests, or meet applicable legal requirements.</p>
+        <p>Fundraising campaign information may be reviewed to help promote transparency and reduce misleading submissions. However, users should understand that a review does not guarantee that every campaign detail or claim is accurate.</p>
+
+
+        <h3 class="mt-4 mb-4">6. Data Protection and Retention</h3>
+        <p>We aim to take reasonable measures to protect information submitted through Safe4Sight from unauthorised access, disclosure, alteration, or misuse.</p>
+        <p>Personal information should only be retained for as long as it is needed to provide the relevant services or fulfil legitimate operational requirements. Users should also take responsibility for protecting their account credentials and any downloaded emergency plans.</p>
+
+
+        <h3 class="mt-4 mb-4">7. Your Privacy and Contact Information</h3>
+        <p>Users are encouraged to provide accurate information while avoiding unnecessary personal details. Where supported by our website, users may request access to, correction of, or deletion of their submitted personal information.</p>
+        
+        <p>Safe4Sight may update this Privacy Policy when website features or information-handling practices change. Any updated version will be published on this page.</p>
+        <p>For privacy-related questions, concerns, or requests, please contact us at:</p>
+        <p><strong>Email:</strong> safe4sight2026@gmail.com</p>
+    </section>
+    
+    
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="Images/icon.png" alt="logo" width="50px" class="me-2 rounded-4">
+                        <h5 class="mb-0">Safe4Sight</h5>
+                    </div>
+                    <p class="footer-address mb-3">201 Yoma Yeik Thar St.,<br>Kamaryut, Yangon</p>
+                </div>
+ 
+                <div class="col-md-2">
+                    <h6 class="footer-heading">QUICK LINKS</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="earthquake.html">Learn & Prepare</a></li>
+                        <li><a href="donation.html">Donations</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="preparedness_checker.html">Are You Prepared?</a></li>
+                    </ul>
+                </div>
+ 
+                <div class="col-md-3">
+                    <h6 class="footer-heading">LEGAL INFORMATION</h6>
+                    <ul class="list-unstyled footer-links">
+                    <li><a href="terms_and_conditions.html">Terms & Conditions</a></li>
+                    <li><a href="privacy_policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+ 
+                <div class="col-md-3">
+                    <h6 class="footer-heading">CONTACT</h6>
+                    <div>
+                        <i class="fa-solid fa-phone me-2"></i>
+                        +95 9201844392
+                    </div>
+ 
+                    <div class="social-links mt-2">
+                    <a href="#">
+                        <i class="fa-brands fa-instagram me-4"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-tiktok me-4"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

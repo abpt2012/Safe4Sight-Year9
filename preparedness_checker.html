@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="/Images/icon_transparent.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preparedness</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg color3bg topnavbar">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="azure">
+                <i class="fa-solid fa-phone me-2"></i>
+                +95 9201844392
+            </div>
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="Images/icon.png" alt="Safe4Sight logo" height="50" class="rounded-4 me-3">
+                <div class="azure">
+                    <h4 class="mb-0">Safe4Sight</h4>
+                </div>
+            </a>
+            <div class="d-flex">
+                <button type="button" class="btn me-2 azure" data-bs-toggle="modal" data-bs-target="#logIn">Log In</button>
+                <button type="button" class="btn azure" data-bs-toggle="modal" data-bs-target="#signUp">Sign Up</button>
+            </div>
+        </div>
+    </nav>
+    <div class="modal fade" id="logIn">
+            <div class="modal-dialog modal-md modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Log into your Account</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-4">
+                            <label class="form-label fw-semibold">Username / Email</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-white"><i class="fa-solid fa-user color2"></i></span>
+                                <input type="text" class="form-control" placeholder="Type your username / email">
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Password</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-white"><i class="fa-solid fa-key color2"></i></span>
+                                <input type="password" class="form-control" placeholder="Type your passwword">
+                            </div>
+                        </div>
+                        <button type="button" class="btn text-white mb-3" style="background-color: #618764;" onclick="loggedIn()">
+                            Log In
+                        </button>
+                        <div class="alert alert-success d-none" id="loggedIn">Logged in successfully!</div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <p>Don't have an account? <a href="#" data-bs-toggle="modal" data-bs-target="#signUp" style="text-decoration: none;">Sign Up Now</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="signUp">
+            <div class="modal-dialog modal-md modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Create an Account</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-4">
+                                <label class="form-label fw-semibold">Username</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white"><i class="fa-solid fa-user color2"></i></span>
+                                    <input type="text" class="form-control" placeholder="Type your username">
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label fw-semibold">Email</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white"><i class="fa-solid fa-envelope color2"></i></span>
+                                    <input type="text" class="form-control" placeholder="Type your email">
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">Password</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white"><i class="fa-solid fa-key color2"></i></span>
+                                    <input type="password" class="form-control" placeholder="Type your passwword">
+                                </div>
+                            </div>
+                            <button type="button" class="btn text-white mb-3" style="background-color: #618764;" onclick="accountCreated()">
+                            Sign Up
+                            </button>
+                            <div class="alert alert-success d-none" id="accountCreated">Account created successfully!</div>
+                        </form>
+                        
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <p>Already have an account? <a href="#" data-bs-toggle="modal" data-bs-target="#logIn" style="text-decoration: none;">Login</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="sticky-nav">
+        <nav class="navbar navbar-dark navbar-expand-lg color3bg bottomnavbar">
+            <div class="container d-flex align-items-center justify-content-between">
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link azure dropdown-toggle" role="button" data-bs-toggle="dropdown">Learn & Prepare</a>
+                            <ul class="dropdown-menu text-center">
+                                <li><a class="dropdown-item" href="earthquake.html">Earthquakes</a></li>
+                                <li><a class="dropdown-item" href="storm.html">Storms</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link azure dropdown-toggle" role="button" data-bs-toggle="dropdown">Community</a>
+                            <ul class="dropdown-menu text-center">
+                                <li><a class="dropdown-item" href="donation.html">Donation</a></li>
+                                <li><a class="dropdown-item" href="community.html">Forum</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="preparedness_checker.html" class="nav-link azure">Are You Prepared?</a></li>
+                    </ul>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </div>
+    
+    <div class="hero-assessment">
+        <div>
+            <div class="hero-toptext-earthquake color1 mb-2">TAKE ACTION</div>
+            <h1 class="fw-bold">Start Preparing</h1>
+            <p class="mt-3" id="beforeduringafter-text">This page will help you with all the essential steps when preparing for a natural disaster.</p>
+        </div>
+    </div>
+    <div class="beforeduringafterbtn-container py-2">
+        <div class="container">
+            <div class="row g-2" style="justify-content: space-evenly;">
+                <div class="col-4 col-md-3 col-lg-2">
+                    <a class="btn beforeduringafterbtn w-100" onclick="showPage('assess', this)">Assess Your Preparedness</a>
+                </div>
+                <div class="col-4 col-md-3 col-lg-2">
+                    <a class="btn beforeduringafterbtn w-100" onclick="showPage('kit', this)">Emergency Safety Kit</a>
+                </div>
+                <div class="col-4 col-md-3 col-lg-2">
+                    <a class="btn beforeduringafterbtn w-100" onclick="showPage('plan', this)">Emergency Plan</a>
+                </div>
+            </div>
+        </div>
+            
+        </div>
+    </div>
+
+    <div id="assess" style="margin-bottom: 50px;">
+
+        <div class="container py-5">
+            <div class="assessment-intro mx-auto mb-4">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <div class="question-number"><i class="fa-solid fa-clipboard-check"></i></div>
+                    <div>
+                        <h2 class="h4 fw-bold mb-1">Household assessment</h2>
+                        <p class="text-muted mb-0">Answer all 5 questions based on your current situation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <form id="assessmentForm" class="assessment-intro mx-auto">
+
+                <div class="assessment-question card shadow-sm p-3 p-md-4">
+                    <div class="d-flex gap-3 mb-3">
+                        <span class="question-number">1</span>
+                        <div>
+                            <h5 class="fw-bold mb-1">What is the main construction material of your house?</h5>
+                            <p class="text-muted mb-0">Choose the main material you know your house uses.</p>
+                        </div>
+                    </div>
+
+                    <label class="assessment-option" for="q1a">
+                        <input class="form-check-input" type="radio" name="q1" id="q1a" value="3">
+                        <span>Reinforced concrete</span>
+                    </label>
+                    <label class="assessment-option" for="q1b">
+                        <input class="form-check-input" type="radio" name="q1" id="q1b" value="2">
+                        <span>Brick or concrete blocks</span>
+                    </label>
+                    <label class="assessment-option" for="q1c">
+                        <input class="form-check-input" type="radio" name="q1" id="q1c" value="2">
+                        <span>Timber or wood</span>
+                    </label>
+                    <label class="assessment-option" for="q1e">
+                        <input class="form-check-input" type="radio" name="q1" id="q1e" value="0">
+                        <span>I am unsure of the main construction material</span>
+                    </label>
+                </div>
+
+                <div class="assessment-question card shadow-sm p-3 p-md-4">
+                    <div class="d-flex align-items-start gap-3 mb-3">
+                        <span class="question-number">2</span>
+                        <div>
+                            <h5 class="fw-bold mb-1">How would you describe the current condition of your house?</h5>
+                            <p class="text-muted mb-0">Look for visible cracks, damaged walls, roof condition, leaks, etc.</p>
+                        </div>
+                    </div>
+
+                    <label class="assessment-option" for="q2a">
+                        <input class="form-check-input" type="radio" name="q2" id="q2a" value="3">
+                        <span>Good condition</span>
+                    </label>
+                    <label class="assessment-option" for="q2b">
+                        <input class="form-check-input" type="radio" name="q2" id="q2b" value="2">
+                        <span>Minor cracks or signs of deterioration</span>
+                    </label>
+                    <label class="assessment-option" for="q2c">
+                        <input class="form-check-input" type="radio" name="q2" id="q2c" value="1">
+                        <span>Frequent leaks or visible structural deterioration</span>
+                    </label>
+                    <label class="assessment-option" for="q2d">
+                        <input class="form-check-input" type="radio" name="q2" id="q2d" value="0">
+                        <span>Significant cracks, damaged walls, or roof</span>
+                    </label>
+                    <label class="assessment-option" for="q2e">
+                        <input class="form-check-input" type="radio" name="q2" id="q2e" value="0">
+                        <span>Unsure</span>
+                    </label>
+                </div>
+
+                <div class="assessment-question card shadow-sm p-3 p-md-4">
+                    <div class="d-flex align-items-start gap-3 mb-3">
+                        <span class="question-number">3</span>
+                        <div>
+                            <h5 class="fw-bold mb-1">Do you have an emergency bag ready to take with you during an evacuation?</h5>
+                            <p class="text-muted mb-0">Think about supplies that are packed together and easy to carry.</p>
+                        </div>
+                    </div>
+
+                    <label class="assessment-option" for="q3a">
+                        <input class="form-check-input" type="radio" name="q3" id="q3a" value="3">
+                        <span>Yes, fully prepared and easily accessible</span>
+                    </label>
+                    <label class="assessment-option" for="q3b">
+                        <input class="form-check-input" type="radio" name="q3" id="q3b" value="2">
+                        <span>Yes, but missing some essential supplies (for more info on essentials, go to Learn & Prepare)</span>
+                    </label>
+                    <label class="assessment-option" for="q3c">
+                        <input class="form-check-input" type="radio" name="q3" id="q3c" value="1">
+                        <span>I have some emergency supplies, but no prepared bag</span>
+                    </label>
+                    <label class="assessment-option" for="q3d">
+                        <input class="form-check-input" type="radio" name="q3" id="q3d" value="0">
+                        <span>No emergency bag or supplies</span>
+                    </label>
+                </div>
+
+                <div class="assessment-question card shadow-sm p-3 p-md-4">
+                    <div class="d-flex align-items-start gap-3 mb-3">
+                        <span class="question-number">4</span>
+                        <div>
+                            <h5 class="fw-bold mb-1">Does your household have an emergency escape plan?</h5>
+                            <p class="text-muted mb-0">Think about the place everyone will meet up, if the way out of your house is always available, etc.</p>
+                        </div>
+                    </div>
+
+                    <label class="assessment-option" for="q4a">
+                        <input class="form-check-input" type="radio" name="q4" id="q4a" value="3">
+                        <span>Yes, everyone knows how to evacuate and where to meet up</span>
+                    </label>
+                    <label class="assessment-option" for="q4b">
+                        <input class="form-check-input" type="radio" name="q4" id="q4b" value="2">
+                        <span>We know how to evacuate, but no meeting place</span>
+                    </label>
+                    <label class="assessment-option" for="q4c">
+                        <input class="form-check-input" type="radio" name="q4" id="q4c" value="1">
+                        <span>Only some household members know how to evacuate safely</span>
+                    </label>
+                    <label class="assessment-option" for="q4d">
+                        <input class="form-check-input" type="radio" name="q4" id="q4d" value="0">
+                        <span>No plan has been made</span>
+                    </label>
+                </div>
+
+                <div class="assessment-question card shadow-sm p-3 p-md-4">
+                    <div class="d-flex align-items-start gap-3 mb-3">
+                        <span class="question-number">5</span>
+                        <div>
+                            <h5 class="fw-bold mb-1">Are essential emergency supplies available in your household?</h5>
+                            <p class="text-muted mb-0">Supplies like drinking water, food, first aid, medicine, flashlights, and batteries.</p>
+                        </div>
+                    </div>
+
+                    <label class="assessment-option" for="q5a">
+                        <input class="form-check-input" type="radio" name="q5" id="q5a" value="3">
+                        <span>Yes, all or nearly all essential supplies are available</span>
+                    </label>
+                    <label class="assessment-option" for="q5b">
+                        <input class="form-check-input" type="radio" name="q5" id="q5b" value="2">
+                        <span>Most essentials are available, but some are missing</span>
+                    </label>
+                    <label class="assessment-option" for="q5c">
+                        <input class="form-check-input" type="radio" name="q5" id="q5c" value="1">
+                        <span>Only a few emergency supplies are available</span>
+                    </label>
+                    <label class="assessment-option" for="q5d">
+                        <input class="form-check-input" type="radio" name="q5" id="q5d" value="0">
+                        <span>No emergency supplies are available</span>
+                    </label>
+                </div>
+
+                <div class="assessment-actions gap-3 justify-content-between mt-4">
+                    <button type="button" class="btn border border-secondary mb-2 me-2 px-4" onclick="resetAssessment()">
+                        <i class="fa-solid fa-rotate-left me-2"></i>Reset answers
+                    </button>
+                    <button type="button" class="btn text-white mb-2 px-4 color2bg color2bghover" onclick="calculateAssessment()">
+                        Calculate my result <i class="fa-solid fa-arrow-right ms-2"></i>
+                    </button>
+                </div>
+
+            </form>
+
+            <section id="assessmentResult" class="assessment-intro mx-auto mt-5 d-none">
+                <div class="card shadow text-center p-4">
+                    <div class="result-score" id="resultScore">0/23</div>
+
+                    <p class="text-muted mb-2" id="resultPercentage">0%</p>
+
+                    <h2 class="h3 fw-bold" id="resultCategory"></h2>
+
+                    <button type="button" class="btn text-white mt-3" style="background-color: #618764;" onclick="resetAssessment()">
+                        Retake Assessment
+                    </button>
+                </div>
+            </section>
+        </div>
+
+    </div>
+
+    <div id="kit" class="d-none" style="margin-bottom: 100px;">
+        <div class="kit-content">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Prepare Your Emergency Kit</h2>
+                <p class="text-muted">Select "Packed" for the items you already have ready. Your progress will update automatically.</p>
+            </div>
+
+            <div class="kit-section" id="food">
+                <div class="mb-4">
+                    <h3 class="kit-section-heading h4">Food & Water</h3>
+                    <p class="text-muted mb-0">Supplies to help your household stay energized and hydrated.</p>
+                </div>
+                <div class="row g-3">
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="kit-item-card">
+                            <div class="kit-card-image"><img src="Images/bottled_water.jpg" alt="Bottles of drinking water"></div>
+                            <div class="kit-card-body">
+                                <h5>Drinking water</h5>
+                                <p class="kit-card-description">Drinking water, either bottled or can be safely stored.</p>
+                                <div class="kit-card-options">
+                                    <label class="kit-radio-option"><input class="form-check-input kit-radio" type="radio" name="kit_water" value="1"> Packed</label>
+                                    <label class="kit-radio-option"><input class="form-check-input kit-radio" type="radio" name="kit_water" value="0"> Not yet</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="kit-item-card">
+                            <div class="kit-card-image"><img src="Images/canned_food.jpg" alt="Non-perishable emergency food"></div>
+                            <div class="kit-card-body">
+                                <h5>Non-perishable food</h5>
+                                <p class="kit-card-description">Easy-to-store food that doesn't need refrigeration.</p>
+                                <div class="kit-card-options">
+                                    <label class="kit-radio-option"><input class="form-check-input kit-radio" type="radio" name="kit_food" value="1"> Packed</label>
+                                    <label class="kit-radio-option"><input class="form-check-input kit-radio" type="radio" name="kit_food" value="0"> Not yet</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="kit-item-card">
+                            <div class="kit-card-image"><img src="Images/can_opener.jpg" alt="Manual can opener"></div>
+                            <div class="kit-card-body">
+                                <h5>Manual can opener</h5>
+                                <p class="kit-card-description">A manual opener for canned food.</p>
+                                <div class="kit-card-options">
+                                    <label class="kit-radio-option"><input class="form-check-input kit-radio" type="radio" name="kit_canopener" value="1"> Packed</label>
+                                    <label class="kit-radio-option"><input class="form-check-input kit-radio" type="radio" name="kit_canopener" value="0"> Not yet</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="kit-section-progress">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <strong>Food & water progress</strong>
+                        <span class="text-muted small" id="foodProgressText">0 of 3 items packed (0%)</span>
+                    </div>
+                    <div class="progress"><div class="progress-bar" id="foodProgress" style="width: 0%;"></div></div>
+                </div>
+            </div>
+
+            <div class="kit-section" id="medicine">
+                <div class="mb-4">
+                    <h3 class="kit-section-heading h4">Medication & First Aid</h3>
+                    <p class="text-muted mb-0">Items for treating minor injuries and managing personal medical needs.</p>
+                </div>
+                <div class="row g-3">
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="kit-item-card">
+                            <div class="kit-card-image"><img src="Images/first_aid.jpg" alt="First-aid kit"></div>
+                            <div class="kit-card-body">
+                                <h5>First-aid kit</h5>
+                                <p class="kit-card-description">Wipes, bandages, cold packs, and other first-aid supplies.</p>
+                                <div class="kit-card-options">
+                                    <label class="kit-radio-option"><input class="form-check-input kit-radio" type="radio" name="kit_firstaid" value="1"> Packed</label>
+                                    <label class="kit-radio-option"><input class="form-check-input kit-radio" type="radio" name="kit_firstaid" value="0"> Not yet</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="kit-item-card">
+                            <div class="kit-card-image"><img src="Images/medicine.jpg" alt="Personal prescription medicines"></div>
+                            <div class="kit-card-body">
+                                <h5>Medicines</h5>
+                                <p class="kit-card-description">A supply of regularly needed medicines or medicines in general.</p>
+                                <div class="kit-card-options">
+                                    <label class="kit-radio-option"><input class="form-check-input kit-radio" type="radio" name="kit_prescription" value="1"> Packed</label>
+                                    <label class="kit-radio-option"><input class="form-check-input kit-radio" type="radio" name="kit_prescription" value="0"> Not yet</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="kit-section-progress">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <strong>Medication & first-aid progress</strong>
+                        <span class="text-muted small" id="medicineProgressText">0 of 2 items packed (0%)</span>
+                    </div>
+                    <div class="progress"><div class="progress-bar" id="medicineProgress" style="width: 0%;"></div></div>
+                </div>
+            </div>
+
+            <div class="kit-section" id="documents">
+                <div class="mb-4">
+                    <h3 class="kit-section-heading h4">Documents & Money</h3>
+                    <p class="text-muted mb-0">Keep important information protected and accessible if you need to evacuate.</p>
+                </div>
+                <div class="row g-3">
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="kit-item-card">
+                            <div class="kit-card-image"><img src="Images/passport.webp" alt="Identity documents"></div>
+                            <div class="kit-card-body">
+                                <h5>Identity documents</h5>
+                                <p class="kit-card-description">Copies of National ID cards, passports, and birth certificates.</p>
+                                <div class="kit-card-options">
+                                    <label class="kit-radio-option"><input class="form-check-input kit-radio" type="radio" name="kit_identity" value="1"> Packed</label>
+                                    <label class="kit-radio-option"><input class="form-check-input kit-radio" type="radio" name="kit_identity" value="0"> Not yet</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="kit-item-card">
+                            <div class="kit-card-image"><img src="Images/property ownership.jpg" alt="Important household documents"></div>
+                            <div class="kit-card-body">
+                                <h5>Household documents</h5>
+                                <p class="kit-card-description">Copies of essential property, insurance or other household documents.</p>
+                                <div class="kit-card-options">
+                                    <label class="kit-radio-option"><input class="form-check-input kit-radio" type="radio" name="kit_housepapers" value="1"> Packed</label>
+                                    <label class="kit-radio-option"><input class="form-check-input kit-radio" type="radio" name="kit_housepapers" value="0"> Not yet</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="kit-item-card">
+                            <div class="kit-card-image"><img src="Images/phone_call.jpg" alt="Written emergency contact list"></div>
+                            <div class="kit-card-body">
+                                <h5>Contacts</h5>
+                                <p class="kit-card-description">Phone numbers and important household (family) contacts.</p>
+                                <div class="kit-card-options">
+                                    <label class="kit-radio-option"><input class="form-check-input kit-radio" type="radio" name="kit_contacts" value="1"> Packed</label>
+                                    <label class="kit-radio-option"><input class="form-check-input kit-radio" type="radio" name="kit_contacts" value="0"> Not yet</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="kit-item-card">
+                            <div class="kit-card-image"><img src="Images/cash.webp" alt="Emergency cash"></div>
+                            <div class="kit-card-body">
+                                <h5>Emergency cash</h5>
+                                <p class="kit-card-description">A small amount of cash.</p>
+                                <div class="kit-card-options">
+                                    <label class="kit-radio-option"><input class="form-check-input kit-radio" type="radio" name="kit_cash" value="1"> Packed</label>
+                                    <label class="kit-radio-option"><input class="form-check-input kit-radio" type="radio" name="kit_cash" value="0"> Not yet</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="kit-section-progress">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <strong>Documents & money progress</strong>
+                        <span class="text-muted small" id="documentsProgressText">0 of 4 items packed (0%)</span>
+                    </div>
+                    <div class="progress"><div class="progress-bar" id="documentsProgress" style="width: 0%;"></div></div>
+                </div>
+            </div>
+
+            <div class="kit-section" id="utilities">
+                <div class="mb-4">
+                    <h3 class="kit-section-heading h4">Utilities & Communication</h3>
+                    <p class="text-muted mb-0">Tools to help you see, communicate and receive information.</p>
+                </div>
+                <div class="row g-3">
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="kit-item-card">
+                            <div class="kit-card-image"><img src="Images/flashlight.jpg" alt="Flashlight"></div>
+                            <div class="kit-card-body">
+                                <h5>Flashlight</h5>
+                                <p class="kit-card-description">A working flashlight when it is getting darker.</p>
+                                <div class="kit-card-options">
+                                    <label class="kit-radio-option"><input class="form-check-input kit-radio" type="radio" name="kit_flashlight" value="1"> Packed</label>
+                                    <label class="kit-radio-option"><input class="form-check-input kit-radio" type="radio" name="kit_flashlight" value="0"> Not yet</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="kit-item-card">
+                            <div class="kit-card-image"><img src="Images/battery.jpg" alt="Spare batteries"></div>
+                            <div class="kit-card-body">
+                                <h5>Spare batteries</h5>
+                                <p class="kit-card-description">Spare batteries that fit your flashlight or other devices.</p>
+                                <div class="kit-card-options">
+                                    <label class="kit-radio-option"><input class="form-check-input kit-radio" type="radio" name="kit_batteries" value="1"> Packed</label>
+                                    <label class="kit-radio-option"><input class="form-check-input kit-radio" type="radio" name="kit_batteries" value="0"> Not yet</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="kit-item-card">
+                            <div class="kit-card-image"><img src="Images/power_bank.webp" alt="Power bank and charging cable"></div>
+                            <div class="kit-card-body">
+                                <h5>Power bank</h5>
+                                <p class="kit-card-description">A charged power bank and charging cable.</p>
+                                <div class="kit-card-options">
+                                    <label class="kit-radio-option"><input class="form-check-input kit-radio" type="radio" name="kit_powerbank" value="1"> Packed</label>
+                                    <label class="kit-radio-option"><input class="form-check-input kit-radio" type="radio" name="kit_powerbank" value="0"> Not yet</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="kit-section-progress">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <strong>Utilities & communication progress</strong>
+                        <span class="text-muted small" id="utilitiesProgressText">0 of 3 items packed (0%)</span>
+                    </div>
+                    <div class="progress"><div class="progress-bar" id="utilitiesProgress" style="width: 0%;"></div></div>
+                </div>
+            </div>
+
+            <div class="kit-section" id="clothing">
+                <div class="mb-4">
+                    <h3 class="kit-section-heading h4">Clothing & Personal Essentials</h3>
+                    <p class="text-muted mb-0">Personal items to help household members stay comfortable and protected.</p>
+                </div>
+                <div class="row g-3">
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="kit-item-card">
+                            <div class="kit-card-image"><img src="Images/clothing.jpg" alt="Folded change of clothes"></div>
+                            <div class="kit-card-body">
+                                <h5>Change of clothes</h5>
+                                <p class="kit-card-description">A spare set of clothing for each household member.</p>
+                                <div class="kit-card-options">
+                                    <label class="kit-radio-option"><input class="form-check-input kit-radio" type="radio" name="kit_clothes" value="1"> Packed</label>
+                                    <label class="kit-radio-option"><input class="form-check-input kit-radio" type="radio" name="kit_clothes" value="0"> Not yet</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="kit-item-card">
+                            <div class="kit-card-image"><img src="Images/shoes.jpg" alt="Sturdy footwear"></div>
+                            <div class="kit-card-body">
+                                <h5>Strong footwear</h5>
+                                <p class="kit-card-description">Durable shoes or sandals suitable for walking or running.</p>
+                                <div class="kit-card-options">
+                                    <label class="kit-radio-option"><input class="form-check-input kit-radio" type="radio" name="kit_footwear" value="1"> Packed</label>
+                                    <label class="kit-radio-option"><input class="form-check-input kit-radio" type="radio" name="kit_footwear" value="0"> Not yet</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="kit-item-card">
+                            <div class="kit-card-image"><img src="Images/toothbrush.jpg" alt="Personal hygiene supplies"></div>
+                            <div class="kit-card-body">
+                                <h5>Personal hygiene supplies</h5>
+                                <p class="kit-card-description">Toothbrushes, soap, and other personal essentials.</p>
+                                <div class="kit-card-options">
+                                    <label class="kit-radio-option"><input class="form-check-input kit-radio" type="radio" name="kit_hygiene" value="1"> Packed</label>
+                                    <label class="kit-radio-option"><input class="form-check-input kit-radio" type="radio" name="kit_hygiene" value="0"> Not yet</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="kit-item-card">
+                            <div class="kit-card-image"><img src="Images/blanket.jpg" alt="Emergency blanket"></div>
+                            <div class="kit-card-body">
+                                <h5>Blanket or rain protection</h5>
+                                <p class="kit-card-description">A blanket, raincoat or other protection items.</p>
+                                <div class="kit-card-options">
+                                    <label class="kit-radio-option"><input class="form-check-input kit-radio" type="radio" name="kit_blanket" value="1"> Packed</label>
+                                    <label class="kit-radio-option"><input class="form-check-input kit-radio" type="radio" name="kit_blanket" value="0"> Not yet</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="kit-section-progress">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <strong>Clothing & personal essentials progress</strong>
+                        <span class="text-muted small" id="clothingProgressText">0 of 4 items packed (0%)</span>
+                    </div>
+                    <div class="progress"><div class="progress-bar" id="clothingProgress" style="width: 0%;"></div></div>
+                </div>
+            </div>
+
+            <div class="kit-total-progress">
+                <h3 class="kit-section-heading h4 mb-3">Overall emergency kit progress</h3>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <strong>Items packed</strong>
+                    <span class="text-muted small" id="kitTotalText">0 of 16 items packed (0%)</span>
+                </div>
+                <div class="progress"><div class="progress-bar" id="kitTotalProgress" style="width: 0%;"></div></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    <div id="plan" style="margin-bottom: 100px;" class="d-none">
+        <div class="container py-5">
+            <div class="plan-intro mx-auto mb-4">
+                <h2 class="fw-bold mb-2">Create Your Family Emergency Plan</h2>
+                <p class="text-muted mb-0">Fill in your household details to create a printable emergency plan. Keep a copy somewhere everyone can access.</p>
+            </div>
+
+            <form id="emergencyPlanForm" class="plan-form mx-auto">
+                <div class="plan-form-section">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <div class="plan-section-icon"><i class="fa-solid fa-house"></i></div>
+                        <div>
+                            <h3 class="h5 fw-bold mb-1">1. Household information</h3>
+                            <p class="text-muted small mb-0">Give information on the household this plan belongs to.</p>
+                        </div>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold" for="planHousehold">Household / family name</label>
+                            <input class="form-control" type="text" id="planHousehold" placeholder="e.g. The ______ Family">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold" for="planAddress">Home address / area</label>
+                            <input class="form-control" type="text" id="planAddress" placeholder="City, Township, Street, House No.">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="plan-form-section">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <div class="plan-section-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div>
+                            <h3 class="h5 fw-bold mb-1">2. Emergency contacts</h3>
+                            <p class="text-muted small mb-0">Add family members, trusted friends and relatives, or other important contacts.</p>
+                        </div>
+                    </div>
+                    <div class="row g-2 plan-contact-heading d-none d-md-flex">
+                        <div class="col-md-4">Name</div>
+                        <div class="col-md-3">Relationship</div>
+                        <div class="col-md-5">Phone number</div>
+                    </div>
+                    <div class="row g-2 mb-3">
+                        <div class="col-md-4"><input class="form-control" type="text" id="planContactName1" placeholder="Contact 1 name"></div>
+                        <div class="col-md-3"><input class="form-control" type="text" id="planContactRelation1" placeholder="e.g. Parent"></div>
+                        <div class="col-md-5"><input class="form-control" type="tel" id="planContactPhone1" placeholder="Phone number"></div>
+                    </div>
+                    <div class="row g-2 mb-3">
+                        <div class="col-md-4"><input class="form-control" type="text" id="planContactName2" placeholder="Contact 2 name"></div>
+                        <div class="col-md-3"><input class="form-control" type="text" id="planContactRelation2" placeholder="e.g. Neighbour"></div>
+                        <div class="col-md-5"><input class="form-control" type="tel" id="planContactPhone2" placeholder="Phone number"></div>
+                    </div>
+                    <div class="row g-2">
+                        <div class="col-md-4"><input class="form-control" type="text" id="planContactName3" placeholder="Contact 3 name"></div>
+                        <div class="col-md-3"><input class="form-control" type="text" id="planContactRelation3" placeholder="e.g. Relative"></div>
+                        <div class="col-md-5"><input class="form-control" type="tel" id="planContactPhone3" placeholder="Phone number"></div>
+                    </div>
+                    <div class="row g-3 mt-1">
+                        <div class="col-12">
+                            <label class="form-label fw-semibold" for="planContactMethod">Preferred way to contact each other</label>
+                            <input class="form-control" type="text" id="planContactMethod" placeholder="e.g. Phone call, SMS, messaging app">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="plan-form-section">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <div class="plan-section-icon"><i class="fa-solid fa-route"></i></div>
+                        <div>
+                            <h3 class="h5 fw-bold mb-1">3. Evacuation routes and meeting places</h3>
+                            <p class="text-muted small mb-0">Write down where to go and where everyone should meet.</p>
+                        </div>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold" for="planRoute1">Primary evacuation route</label>
+                            <input class="form-control" type="text" id="planRoute1" placeholder="The main route out of your area">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold" for="planRoute2">Alternative evacuation route <span class="text-muted fw-normal">(optional)</span></label>
+                            <input class="form-control" type="text" id="planRoute2" placeholder="A second route if the main route is blocked">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold" for="planAssemblyPoint">Primary meeting place</label>
+                            <input class="form-control" type="text" id="planAssemblyPoint" placeholder="Where everyone should meet outside the danger area">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold" for="planBackupPoint">Backup meeting place <span class="text-muted fw-normal">(optional)</span></label>
+                            <input class="form-control" type="text" id="planBackupPoint" placeholder="An alternative meeting place">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="plan-form-section">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <div class="plan-section-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <h3 class="h5 fw-bold mb-1">4. Important item locations</h3>
+                            <p class="text-muted small mb-0">Record where household members can find essential items quickly.</p>
+                        </div>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold" for="planGoBag">Emergency safety bag</label>
+                            <input class="form-control" id="planGoBag" type="text" placeholder="Where is it kept?">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold" for="planFirstAid">First-aid kit</label>
+                            <input class="form-control" id="planFirstAid" type="text" placeholder="Where is it kept?">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold" for="planDocuments">Important documents</label>
+                            <input class="form-control" id="planDocuments" type="text" placeholder="Where are they stored?">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold" for="planUtilities">Electricity/water circuit breakers</label>
+                            <input class="form-control" id="planUtilities" type="text" placeholder="Where are the controls located?">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold" for="planMedicines">Essential medicines</label>
+                            <input class="form-control" id="planMedicines" type="text" placeholder="Where are they stored?">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column flex-sm-row justify-content-between gap-2 mt-4">
+                    <button type="reset" class="btn btn-outline-secondary px-4" onclick="document.getElementById('emergencyPlanOutput').classList.add('d-none')">Clear form</button>
+                    <button type="button" class="btn text-white px-4 color2bg color2bghover" onclick="generateEmergencyPlan()">
+                        Create my emergency plan</i>
+                    </button>
+                </div>
+            </form>
+
+            <section id="emergencyPlanOutput" class="mt-5 d-none">
+                <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-3 mb-3 no-print">
+                    <div>
+                        <h2 class="h4 fw-bold mb-1">Your completed emergency plan</h2>
+                        <p class="text-muted mb-0">Review the information, then print or download a copy.</p>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2">
+                        <button type="button" class="btn btn-outline-secondary" onclick="printEmergencyPlan()"><i class="fa-solid fa-print me-2"></i>Print</button>
+                    </div>
+                </div>
+
+                <div id="emergencyPlanPreview" class="plan-paper">
+                    <div class="plan-paper-top">
+                        <div class="plan-brand"><img src="Images/logo.png"><span>SAFE4SIGHT</span></div>
+                    </div>
+                    <h2 class="plan-paper-title">Household Emergency Response Plan</h2>
+                    <p class="plan-paper-subtitle">Keep this plan somewhere accessible and make sure every household member knows where to find it.</p>
+
+                    <div class="mb-3">
+                        <div class="row g-3">
+                            <div class="col-12 col-md-6">
+                                <div class="plan-basic-item">
+                                    <span>HOUSEHOLD / FAMILY</span><br>
+                                    <strong id="previewHousehold">Not provided</strong>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <div class="plan-basic-item">
+                                    <span>HOME ADDRESS</span><br>
+                                    <strong id="previewAddress">Not provided</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row g-3 mb-3">
+                        <div class="col-12 col-md-6">
+                            <div class="plan-preview-block">
+                                <h3>Emergency contacts</h3>
+                                <table class="plan-preview-table">
+                                    <thead>
+                                        <tr><th>Name</th><th>Relationship</th><th>Phone</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td id="previewContactName1">-</td><td id="previewContactRelation1">-</td><td id="previewContactPhone1">-</td></tr>
+                                        <tr><td id="previewContactName2">-</td><td id="previewContactRelation2">-</td><td id="previewContactPhone2">-</td></tr>
+                                        <tr><td id="previewContactName3">-</td><td id="previewContactRelation3">-</td><td id="previewContactPhone3">-</td></tr>
+                                    </tbody>
+                                </table>
+                                <p class="plan-small-line"><strong>Preferred contact method:</strong> <span id="previewContactMethod">Not provided</span></p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                            <div class="plan-preview-block">
+                                <h3>Evacuation routes and meeting places</h3>
+                                <p><strong>Primary route:</strong> <span id="previewRoute1">Not provided</span></p>
+                                <p><strong>Alternative route:</strong> <span id="previewRoute2">Not provided</span></p>
+                                <p><strong>Primary assembly point:</strong> <span id="previewAssembly">Not provided</span></p>
+                                <p><strong>Backup meeting place:</strong> <span id="previewBackupPoint">Not provided</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="plan-preview-block plan-preview-wide mb-3">
+                        <h3>Important item locations</h3>
+                        <table class="plan-preview-table">
+                            <tbody>
+                                <tr><th>Emergency go-bag</th><td id="previewGoBag">Not provided</td></tr>
+                                <tr><th>First-aid kit</th><td id="previewFirstAid">Not provided</td></tr>
+                                <tr><th>Important documents</th><td id="previewDocuments">Not provided</td></tr>
+                                <tr><th>Utility shut-offs</th><td id="previewUtilities">Not provided</td></tr>
+                                <tr><th>Essential medicines</th><td id="previewMedicines">Not provided</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                        <div class="plan-paper-footer">
+                            <span>SAFE4SIGHT</span>
+                            <span>Review and update this plan regularly.</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="Images/icon.png" alt="logo" width="50px" class="me-2 rounded-4">
+                        <h5 class="mb-0">Safe4Sight</h5>
+                    </div>
+                    <p class="footer-address mb-3">201 Yoma Yeik Thar St.,<br>Kamaryut, Yangon</p>
+                </div>
+ 
+                <div class="col-md-2">
+                    <h6 class="footer-heading">QUICK LINKS</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="earthquake.html">Learn & Prepare</a></li>
+                        <li><a href="donation.html">Donations</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="preparedness_checker.html">Are You Prepared?</a></li>
+                    </ul>
+                </div>
+ 
+                <div class="col-md-3">
+                    <h6 class="footer-heading">LEGAL INFORMATION</h6>
+                    <ul class="list-unstyled footer-links">
+                    <li><a href="terms_and_conditions.html">Terms & Conditions</a></li>
+                    <li><a href="privacy_policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+ 
+                <div class="col-md-3">
+                    <h6 class="footer-heading">CONTACT</h6>
+                    <div>
+                        <i class="fa-solid fa-phone me-2"></i>
+                        +95 9201844392
+                    </div>
+ 
+                    <div class="social-links mt-2">
+                    <a href="#">
+                        <i class="fa-brands fa-instagram me-4"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-tiktok me-4"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="storedContacts">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title fw-bold">
+                    <i class="fa-solid fa-address-book color2 me-2"></i>
+                    Stored Emergency Contacts
+                </h5>
+                <button type="button" class="btn-close"
+                        data-bs-dismiss="modal">
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <p class="text-muted">
+                    Your saved emergency contacts are listed below.
+                </p>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Name / Role</th>
+                                <th>Phone Number</th>
+                            </tr>
+                        </thead>
+                        <tbody id="storedContactsTable">
+                        </tbody>
+                    </table>
+                </div>
+                <p id="noContactsMessage" class="text-muted text-center d-none">
+                    No emergency contacts have been added yet.
+                </p>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn color2bg color2bghover text-white"
+                        data-bs-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function showPage(page, button){
+            document.getElementById("assess").classList.add("d-none");
+            document.getElementById("kit").classList.add("d-none");
+            document.getElementById("plan").classList.add("d-none");
+
+            document.getElementById(page).classList.remove("d-none");
+
+            if (page == "assess"){
+                document.getElementById("beforeduringafter-text").innerHTML = "This page will assess your preparedness in case of a natural disaster based on your current situation.";
+            }
+            else if(page == "kit"){
+                document.getElementById("beforeduringafter-text").innerHTML = "This page will help you pack an emergency safety kit containing all essential supplies.";
+            }
+            else{
+                document.getElementById("beforeduringafter-text").innerHTML = "This page will help you create an emergency plan in case of a natural disaster."
+            }
+        }
+        function calculateAssessment(){
+            let questionNames = ["q1", "q2", "q3", "q4", "q5"];
+            let totalScore = 0;
+            let unanswered = false;
+
+            for (let i = 0; i < questionNames.length; i++){
+
+                let selectedOption = document.querySelector('input[name="' + questionNames[i] + '"]:checked');
+
+                if (selectedOption === null){
+                    unanswered = true;
+                }
+                else{
+                    totalScore += Number(selectedOption.value);
+                }
+
+            }
+            if (unanswered){
+                alert("Please answer all 5 questions!");
+                return;
+            }
+
+            let maximumScore = 15;
+            let percentage = Math.round((totalScore / maximumScore) * 100);
+            let category = "";
+
+            if (percentage >= 70){
+                category = "Well Prepared";
+            }
+            else if (percentage >= 40){
+                category = "Decently Prepared";
+            }
+            else{
+                category = "Not Prepared";
+            }
+
+            document.getElementById("resultScore").textContent = totalScore + "/" + maximumScore;
+            document.getElementById("resultPercentage").textContent = percentage + "%";
+            document.getElementById("resultCategory").textContent = category;
+
+            document.getElementById("assessmentResult").classList.remove("d-none");
+        }
+
+
+        function resetAssessment(){
+           document.getElementById("assessmentForm").reset();
+            document.getElementById("assessmentResult").classList.add("d-none");
+        }
+        let emergencyRadios = document.querySelectorAll(".kit-radio");
+
+        function updateKitProgress(){
+            let sectionNames = ["food", "medicine", "documents", "utilities", "clothing"];
+            let totalCards = document.querySelectorAll(".kit-item-card");
+            let totalPacked = 0;
+
+            for (let i = 0; i < sectionNames.length; i++){
+                let section = document.getElementById(sectionNames[i]);
+                let sectionCards = section.querySelectorAll(".kit-item-card");
+                let sectionPacked = 0;
+
+                sectionCards.forEach(function(card){
+                    let selectedOption = card.querySelector('input[type="radio"]:checked');
+                    if (selectedOption !== null && selectedOption.value === "1"){
+                        sectionPacked++;
+                    }
+                });
+
+                let percentage = Math.round((sectionPacked / sectionCards.length) * 100);
+
+                document.getElementById(sectionNames[i] + "Progress").style.width = percentage + "%";
+                document.getElementById(sectionNames[i] + "ProgressText").textContent = sectionPacked + " of " + sectionCards.length + " items packed (" + percentage + "%)";
+                totalPacked += sectionPacked;
+            }
+
+            let totalPercentage = Math.round((totalPacked / totalCards.length) * 100);
+            document.getElementById("kitTotalProgress").style.width = totalPercentage + "%";
+            document.getElementById("kitTotalText").textContent = totalPacked + " of " + totalCards.length + " items packed (" + totalPercentage + "%)";
+        }
+
+        emergencyRadios.forEach(function(radio){
+            radio.addEventListener("change", updateKitProgress);
+        });
+
+        function generateEmergencyPlan(){
+            let emergencyPlan = {
+                household: document.getElementById("planHousehold").value,
+                address: document.getElementById("planAddress").value,
+                contactName1: document.getElementById("planContactName1").value,
+                contactRelation1: document.getElementById("planContactRelation1").value,
+                contactPhone1: document.getElementById("planContactPhone1").value,
+                contactName2: document.getElementById("planContactName2").value,
+                contactRelation2: document.getElementById("planContactRelation2").value,
+                contactPhone2: document.getElementById("planContactPhone2").value,
+                contactName3: document.getElementById("planContactName3").value,
+                contactRelation3: document.getElementById("planContactRelation3").value,
+                contactPhone3: document.getElementById("planContactPhone3").value,
+                contactMethod: document.getElementById("planContactMethod").value,
+                route1: document.getElementById("planRoute1").value,
+                route2: document.getElementById("planRoute2").value,
+                assemblyPoint: document.getElementById("planAssemblyPoint").value,
+                backupPoint: document.getElementById("planBackupPoint").value,
+                goBag: document.getElementById("planGoBag").value,
+                firstAid: document.getElementById("planFirstAid").value,
+                documents: document.getElementById("planDocuments").value,
+                utilities: document.getElementById("planUtilities").value,
+                medicines: document.getElementById("planMedicines").value,
+            };
+
+            let previewFields = {
+                previewHousehold: emergencyPlan.household,
+                previewAddress: emergencyPlan.address,
+                previewContactName1: emergencyPlan.contactName1,
+                previewContactRelation1: emergencyPlan.contactRelation1,
+                previewContactPhone1: emergencyPlan.contactPhone1,
+                previewContactName2: emergencyPlan.contactName2,
+                previewContactRelation2: emergencyPlan.contactRelation2,
+                previewContactPhone2: emergencyPlan.contactPhone2,
+                previewContactName3: emergencyPlan.contactName3,
+                previewContactRelation3: emergencyPlan.contactRelation3,
+                previewContactPhone3: emergencyPlan.contactPhone3,
+                previewContactMethod: emergencyPlan.contactMethod,
+                previewRoute1: emergencyPlan.route1,
+                previewRoute2: emergencyPlan.route2,
+                previewAssembly: emergencyPlan.assemblyPoint,
+                previewBackupPoint: emergencyPlan.backupPoint,
+                previewGoBag: emergencyPlan.goBag,
+                previewFirstAid: emergencyPlan.firstAid,
+                previewDocuments: emergencyPlan.documents,
+                previewUtilities: emergencyPlan.utilities,
+                previewMedicines: emergencyPlan.medicines,
+            };
+
+            for (let id in previewFields){
+                document.getElementById(id).textContent = previewFields[id] || "Not provided";
+            }
+
+            document.getElementById("emergencyPlanOutput").classList.remove("d-none");
+        }
+
+        function printEmergencyPlan(){
+            window.print();
+        }
+
+        function accountCreated(){
+            let accountCreated = document.getElementById("accountCreated");
+            accountCreated.classList.remove("d-none");
+        }
+        function loggedIn(){
+            let loggedIn = document.getElementById("loggedIn");
+            loggedIn.classList.remove("d-none");
+        }
+    </script>
+</body>
+</html>
