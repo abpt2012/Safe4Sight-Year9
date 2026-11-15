@@ -8,154 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        body{
-            background-color: rgb(243, 242, 242);
-        }
-        .topnavbar{
-            border-bottom: 2px solid #605654;
-        }
-        .bottomnavbar{
-            box-shadow: 0px 15px 15px -5px rgba(0, 0, 0, 0.1);
-        }
-        .sticky-nav{
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background-color: rgb(238, 238, 238);
-            box-shadow: 0px 15px 15px -5px rgba(0, 0, 0, 0.2);
-        }
-        .color1{
-            color: #9CB080;
-        }
-        .color2{
-            color: #618764;
-        }
-        .color1bg{
-            background-color: #9CB080;
-        }
-        .color1bg:hover{
-            background-color: rgb(124, 137, 105);
-        }
-        .color2bg{
-            background-color: #618764;
-        }
-        .color2bg:hover{
-            background-color: #496c4c;
-        }
-        .color3bg{
-            background-color: #1f3315;
-        }
-        .azure{
-            color: #c8d1d9;
-        }
-        .nav-item{
-            margin-right: 20px;
-        }
-        .hero{
-            background-image: url('Images/hero.png');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            height: 575px;
-            color: white;
-            display: flex;
-            align-items: center;
-            padding-left: 75px;
-        }
-        .hero-toptext{
-            font-size: 15px;
-            font-weight: 800;
-        }
-        .hero h1{
-            font-size: 65px;
-            line-height: 75px;
-        }
-        .hero p{
-            font-size: 18px;
-            width: 580px;
-            color: #e3edf0;
-        }
-        .hero-actions{
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .trust-strip{
-            padding-top: 23px;
-            padding-bottom: 23px;
-            border-bottom: 1px solid #dcdddc;
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-        }
-        .trust-item{
-            display: flex;
-            align-items: center;
-        }
-        .trust-icon{
-            width: 42px;
-            height: 42px;
-            border-radius: 12px;
-            background-color: #9CB080;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .card-links{
-            text-decoration: none;
-        }
-
-        .site-footer{
-            overflow: hidden;
-            padding-top: 60px;
-            padding-bottom: 60px;
-            color: #fff;
-            background-image: url(Images/footer.png);
-            background-size: cover;
-        }
-        .site-footer h5{
-            font-size: 20px;
-            font-weight: 600;
-        }
-        .brand-icon{
-            background-image: url(Images/icon.png);
-        }
-        .footer-address{
-            color: rgb(235, 233, 233);
-        }
-        .footer-heading{
-            margin-bottom: 14px;
-            font-size: 17px;
-            font-weight: 750;
-        }
-        .footer-links li{
-            margin-bottom: 3px;
-        }
-        .footer-links a{
-            color: rgb(235, 233, 233);
-            font-size: 14px;
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-        .footer-links a:hover{
-            color:#bfcfa9;
-        }
-        .social-links{
-            display: flex;
-            align-items: center;
-        }
-        .social-links a{
-            color: #fff;
-            font-size: 30px;
-            transition: color 0.2s ease;
-        }
-        .social-links a:hover{
-            color:#bfcfa9;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg color3bg topnavbar">
@@ -289,48 +142,64 @@
         </nav>
     </div>
 
-    <div class="hero">
+    <div class="hero-donation">
         <div class="hero-content">
             <div class="hero-toptext color1 mb-3">DIGITAL CROWDFUNDING</div>
             <h1 class="fw-bold">Give when you can.<br>Receive when you need.</h1>
             <p class="mt-4">Help families recover, rebuild, and feel safe again. Discover fundraisers and send support where it is needed most.</p>
             <div class="hero-actions mt-5">
-                <a class="btn color1bg text-light me-3 px-3 py-2" href="#donation" style="font-size: 17px; font-weight: 600;">Donate to a fundraiser</a>
+                <a class="btn color1bg color1bghover text-light me-3 px-3 py-2" href="#donation" style="font-size: 17px; font-weight: 600;">Donate to a fundraiser</a>
                 <a class="btn btn-light px-3 py-2" href="#createdonation" style="font-size: 17px; font-weight: 600;">Start a fundraiser</a>
             </div>
         </div>
     </div>
 
     <div class="trust-strip">
-             <div class="trust-item">
-                <div class="trust-icon"><i class="fa-solid fa-user-plus"></i></div>
-                <div>
-                    <h6 class="p-0 m-0 ms-3 mb-1">Sign up / Log in</h6>
-                    <p class="p-0 m-0 ms-3 text-muted" style="font-size: 14px;">Create an account to launch or donate to a fundraiser</p>
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-12 col-md-4">
+                    <div class="trust-item">
+                        <div class="trust-icon">
+                            <i class="fa-solid fa-user-plus"></i>
+                        </div>
+                        <div>
+                            <h6 class="p-0 m-0 mb-1">Sign up / Log in</h6>
+                            <p class="p-0 m-0 text-muted" style="font-size: 14px;">Create an account to launch or donate to a fundraiser</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="trust-item">
+                        <div class="trust-icon">
+                            <i class="fa-solid fa-cloud-arrow-up"></i>
+                        </div>
+                        <div>
+                            <h6 class="p-0 m-0 mb-1">Submit fundraisers</h6>
+                            <p class="p-0 m-0 text-muted" style="font-size: 14px;">Create a fundraiser to support disaster recovery</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="trust-item">
+                        <div class="trust-icon">
+                            <i class="fa-solid fa-hand-holding-dollar"></i>
+                        </div>
+                        <div>
+                            <h6 class="p-0 m-0 mb-1">Donate to fundraisers</h6>
+                            <p class="p-0 m-0 text-muted" style="font-size: 14px;">Find meaningful fundraisers and help affected communities</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="trust-item">
-                <div class="trust-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
-                <div>
-                    <h6 class="p-0 m-0 ms-3 mb-1">Submit fundraisers</h6>
-                    <p class="p-0 m-0 ms-3 text-muted" style="font-size: 14px;">Create a fundraiser to support disaster recovery</p>
-                </div>
-            </div>
-            <div class="trust-item">
-                <div class="trust-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
-                <div>
-                    <h6 class="p-0 m-0 ms-3 mb-1">Donate to fundraisers</h6>
-                    <p class="p-0 m-0 ms-3 text-muted" style="font-size: 14px;">Find meaningful fundraisers and help affected communities</p>
-                </div>
-            </div>
+        </div>
     </div>
 
     <div class="container mt-3 pb-5" style="display: flex; justify-content: center;" id="createdonation">
 
-        <div class="card text-dark mt-5 mb-4 border border-0 " style="border-radius: 16px; overflow: hidden; width: 75vw; background-color: #e3f1d1;">
+        <div class="card text-dark mt-5 mb-4 border border-0 create-fundraiser-card ">
             <div class="row">
 
-                <div class="col-7 p-5">
+                <div class="col-12 col-lg-7 p-5">
                     <div>
                         <div class="hero-toptext color2 mb-3">
                             HAVE A COMMUNITY THAT NEEDS HELP?
@@ -356,11 +225,11 @@
                                 <p>Report progress and how donations are used.</p>
                             </div>
                         </div>
-                        <a class="btn color1bg text-light mt-5 me-3 px-3 py-2" data-bs-toggle="modal" data-bs-target="#create" style="font-size: 17px; font-weight: 600;">Create a fundraiser</a>
+                        <a class="btn color1bg color1bghover text-light mt-5 me-3 px-3 py-2" data-bs-toggle="modal" data-bs-target="#create" style="font-size: 17px; font-weight: 600;">Create a fundraiser</a>
                     </div>   
                 </div>
 
-                <div class="col-5">
+                <div class="col-12 col-lg-5">
                     <img src="Images/fundraiser_card.png" class="img-fluid h-100" style="object-fit: cover;">
                 </div>
 
@@ -439,11 +308,11 @@
             COMMUNITY FUNDRAISERS
         </div>
         <h1 class="mb-3" style="font-weight: 700;">Start donating to those in need.</h1>
-        <p class="text-muted" style="width: 75ch; font-size: 17px;">Explore fundraisers created by our users and show them some love and support by donating. Choose a cause and start payment.</p>
+        <p class="text-muted" style="width: 100%; font-size: 17px;">Explore fundraisers created by our users and show them some love and support by donating. Choose a cause and start payment.</p>
     </div>
     <div class="container mt-5 " style="display: flex; justify-content: center; width: 75vw;">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 mb-5">
                 <h4 class="mb-4">Featured Post</h4>
                 <div class="card" style="border-radius: 15px; overflow: hidden;">
                     <img class="card-img-top" src="Images/donation1.jpg" alt="Card image" style="height: 200px; object-fit: cover;">
@@ -462,7 +331,7 @@
                             <p class="text-muted" style="font-size: 13px;">Goal: MMK 3,000,000</p>
                             <p class="text-muted" style="font-size: 13px;">14 days left</p>
                         </div>
-                        <a class="btn color2bg text-white w-100 mt-3" href="donate1.html">Support this fundraiser</a>
+                        <a class="btn color2bg color2bghover text-white w-100 mt-3" href="donate1.html">Support this fundraiser</a>
                     </div>
                 </div>
             </div>
@@ -486,7 +355,7 @@
                         </div>
                         </a>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 mb-4">
                         <a href="donate1.html" class="card-links">
                             <div class="card" style="border-radius: 15px; overflow: hidden;">
                                 <img class="card-img-top" src="Images/donation3.jpg" alt="Card image" style="height: 115px; object-fit: cover;">
@@ -503,7 +372,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 mb-4">
                         <a href="donate2.html" class="card-links">
                             <div class="card" style="border-radius: 15px; overflow: hidden;">
                                 <img class="card-img-top" src="Images/donation4.jpg" alt="Card image" style="height: 115px; object-fit: cover;">

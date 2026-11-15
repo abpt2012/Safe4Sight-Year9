@@ -12,32 +12,38 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
-        .hero1{
+        .hero1 {
             background-image: url(Images/yangon_banner.jpg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
-            height: 575px;
+            min-height: 575px;
+            height: auto;
             color: white;
             display: flex;
             align-items: center;
-            padding-left: 75px;
-     }
+            padding: 40px 75px;
+        }
+
+        .box {
+            background: rgba(30, 28, 28, 0.2);
+            width: 100%;
+            max-width: 500px;
+            border-radius: 5px;
+            padding: 10px 22px 20px;
+        }
      .hero-title{
         color: white;
      }
  
-     h1{
+     .hero1 h1 {
         font-size: 100px;
-     }
-     .box{
-        background: rgba(30, 28, 28, 0.2);
-        width: 500px;
-        border-radius: 5px;
-        padding-left: 22px;
-        padding-bottom: 20px;
-        padding-top: 10px;
-     }   
+    }
+    @media (max-width: 768px) {
+        .hero1 h1{
+            font-size: 48px;
+        }
+    }
     </style>
 </head>
 <body>
@@ -307,35 +313,40 @@
             </div>
     </div>
 
-     <div class="hero1" >
-        <div class="row">
-            <div class="col">
-                <div class="box">
-                    <div class="hero-title">
-                        <span>
-                            <h1><strong>77°F</strong></h1>
-                        </span>
-                            </div>
+     <div class="hero1">
+        <div class="container">
+            <div class="row g-3 justify-content-center align-items-center">
+
+                <div class="col-12 col-md-6 d-flex justify-content-center">
+                    <div class="box">
+                        <div class="hero-title">
+                            <span>
+                                <h1><strong>77°F</strong></h1>
+                            </span>
+                        </div>
                         <h5>Yangon</h5>
                         <p>Wednesday <br> November 11th 2026</p>
                         <i class="fa-solid fa-cloud me-2"></i>
-                        </div>
-               </div>
-            <div class="col">
-                <div class="box">
-                    <h6>Disaster Possibility</h6>
-                    <p>Storm</p>
-                    <div class="progress mb-3" style="height: 20px;">
-                        <div class="progress-bar color2bg" style="width: 50%;">50%</div>
-                    </div>
-                    <p>Flood</p>
-                    <div class="progress mb-3" style="height: 20px;">
-                        <div class="progress-bar color1bg" style="width: 10%;">10%</div>
                     </div>
                 </div>
-            </div>
+
+                <div class="col-12 col-md-6 d-flex justify-content-center">
+                    <div class="box">
+                        <h6>Disaster Possibility</h6>
+                        <p>Storm</p>
+                        <div class="progress mb-3" style="height: 20px;">
+                            <div class="progress-bar color2bg" style="width: 50%;">50%</div>
+                        </div>
+                        <p>Flood</p>
+                        <div class="progress mb-3" style="height: 20px;">
+                            <div class="progress-bar color1bg" style="width: 10%;">10%</div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
+    </div>
 
             
 
@@ -344,15 +355,28 @@
             <h2 class="section-title">Recommended Causes</h2>
             <p>Take a look at some available fundraisers.</p>
         </div>
-
-        <div class="product-filters">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="crisis">Crisis</button>
-            <button class="filter-btn" data-filter="humanaid">Humanitarian Aid</button>
-            <button class="filter-btn" data-filter="animal">Animals</button>
-            <button class="filter-btn" data-filter="medicine">Health</button>
-            <button class="filter-btn" data-filter="education">Education</button>
-            <button class="filter-btn" data-filter="family">Family</button>
+        <div class="product-filters row g-2 justify-content-center">
+            <div class="col-6 col-sm-4 col-md-auto">
+                <button class="filter-btn active w-100" data-filter="all">All</button>
+            </div>
+            <div class="col-6 col-sm-4 col-md-auto">
+                <button class="filter-btn w-100" data-filter="crisis">Crisis</button>
+            </div>
+            <div class="col-6 col-sm-4 col-md-auto">
+                <button class="filter-btn w-100" data-filter="humanaid">Humanitarian Aid</button>
+            </div>
+            <div class="col-6 col-sm-4 col-md-auto">
+                <button class="filter-btn w-100" data-filter="animal">Animals</button>
+            </div>
+            <div class="col-6 col-sm-4 col-md-auto">
+                <button class="filter-btn w-100" data-filter="medicine">Health</button>
+            </div>
+            <div class="col-6 col-sm-4 col-md-auto">
+                <button class="filter-btn w-100" data-filter="education">Education</button>
+            </div>
+            <div class="col-6 col-sm-4 col-md-auto">
+                <button class="filter-btn w-100" data-filter="family">Family</button>
+            </div>
         </div>
 
         

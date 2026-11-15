@@ -28,15 +28,21 @@
     .color1bg{
         background-color: #9CB080;
     }
+    .color1bghover:hover{
+        background-color: #6c7a59;
+    }
     .color2bg{
         background-color: #618764;
     }
     .color2bghover:hover{
         background-color: #496c4c;
     }
-        .color3bg{
-            background-color: #1f3315;
-        }
+    .color3bg{
+        background-color: #1f3315;
+    }
+    .color3bghover:hover{
+        background-color: #0f190a;
+    }
     .azure{
         color: #c8d1d9;
     }
@@ -294,9 +300,6 @@
 }
 
 .product-filters {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
     margin-bottom: 40px;
 }
 
@@ -709,6 +712,81 @@
     margin-right: 15px;
 
 }
+
+/*donation CSS*/
+.hero-donation{
+    background-image: url('Images/hero.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 575px;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 60px 75px;
+}
+.hero-toptext{
+    font-size: 15px;
+    font-weight: 800;
+}
+.hero-donation h1{
+    font-size: 65px;
+    line-height: 1.15;
+}
+@media (max-width: 768px){
+    .hero-donation h1{
+        font-size: 32px;
+    }
+    .hero-donation a{
+        margin-bottom: 10px;
+    }
+}
+.hero-donation p{
+    font-size: 18px;
+    width: 100%;
+    color: #e3edf0;
+}
+.hero-actions{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.trust-strip{
+    padding-top: 23px;
+    padding-bottom: 23px;
+    border-bottom: 1px solid #dcdddc;
+}
+.trust-item{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    height: 100%;
+}
+.trust-icon{
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background-color: #9CB080;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-links{
+    text-decoration: none;
+}
+.create-fundraiser-card{
+    border-radius: 16px; 
+    overflow: hidden; 
+    width: 75vw; 
+    background-color: #e3f1d1;
+}
+@media (max-width: 768px){
+    .create-fundraiser-card{
+        width: 100vw;
+    }
+}
+
 
 /*assessment CSS*/
 .hero-assessment{
