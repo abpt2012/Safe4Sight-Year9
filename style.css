@@ -99,7 +99,38 @@
 
 
 /*Homepage CSS*/
+.hero1 {
+    background-image: url(Images/yangon_banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 575px;
+    height: auto;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 40px 75px;
+}
 
+.box {
+    background: rgba(30, 28, 28, 0.2);
+    width: 100%;
+    max-width: 500px;
+    border-radius: 5px;
+    padding: 10px 22px 20px;
+}
+.hero-title{
+color: white;
+}
+
+.hero1 h1 {
+font-size: 100px;
+}
+@media (max-width: 768px) {
+.hero1 h1{
+    font-size: 48px;
+}
+}
 .logo {
     font-size: 24px;
     font-weight: 700;
